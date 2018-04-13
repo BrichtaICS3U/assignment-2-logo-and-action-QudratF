@@ -1,6 +1,6 @@
 # ICS3U
 # Assignment 2: Logo
-# <your name>
+# <Qudrat Fazli>
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
@@ -13,7 +13,8 @@ pygame.init()
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
-RED = (255, 0, 0)
+RED = (214, 12, 15)
+BLUE = (46, 5, 140)
 
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
@@ -47,9 +48,17 @@ while carryOn:
     screen.fill(WHITE)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    #pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
+    #pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
+    pygame.draw.ellipse(screen, RED, [75, 75, 250, 250], 0)
+    pygame.draw.ellipse(screen, BLACK, [75, 75, 250, 250], 4)
+    pygame.draw.ellipse(screen, WHITE, [100, 100, 200, 200], 0)
+    pygame.draw.ellipse(screen, RED, [125, 125, 150, 150], 0)
+    pygame.draw.ellipse(screen, BLUE, [143, 143, 115, 115], 0)
+    pygame.draw.polygon(screen, WHITE, ([148, 182], [190, 182], [200, 145], [210, 182], [252, 182], [217, 205], [228, 242], [200, 220],[172, 242], [182, 205]    ), 0)
+    
+    
+     
 
     # Update the screen with queued shapes
     pygame.display.flip()
