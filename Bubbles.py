@@ -21,12 +21,12 @@ class BUBBLE(pygame.sprite.Sprite):
         self.speed = speed
  
         # Draw the car (a rectangle!)
-        pygame.draw.elipse(self.image, self.color, [0, 0, self.width, self.height])
+        pygame.draw.ellipse(self.image,color,[0,0,self.width,self.height])
         
-        self.elipse = self.image.get_elipse()
+        self.rect = self.image.get_rect()
  
-    def moveForward(self, speed):
-        self.rect.y += self.speed * speed / 20
+    def moveUp(self, speed):
+        self.rect.y -= self.speed * speed / 20
         
     def changeSpeed(self, speed):
         self.speed = speed
