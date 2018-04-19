@@ -8,8 +8,12 @@
 # Don't forget to import your class
 import pygame, random
 from Bubbles import BUBBLE
-pygame.init()
 
+pygame.init()
+pygame.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=4096)
+pygame.mixer.music.load('SpongeBob.mp3')#https://www.youtube.com/watch?v=vE2ETqUGj6Q
+pygame.mixer.music.play(-1)
+BackGround = pygame.image.load('jajaja_400x400.jpg')#https://twitter.com/krustykrabtw
 # Define some colours
 # Colours are defined using RGB values
 BLACK = (0, 0, 0)
@@ -61,7 +65,7 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.blit(BackGround,(0, 0))
     Bub.draw(screen)
 
     # Queue different shapes and lines to be drawn
